@@ -1,0 +1,2575 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    -webkit-transition: .2s linear;
+    transition: all .5s ease-in-out;
+}
+
+input::placeholder{
+    color: #4a4b4b;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html::-webkit-scrollbar {
+    width: .1rem;
+}
+
+html::-webkit-scrollbar-track {
+background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+background: #848484;
+}
+
+body{
+    overflow-x: hidden;
+
+
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+header{
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    background: #ffffff;
+}
+
+header > .uperheading {
+    background: rgb(231, 239, 242);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+}
+
+header > .uperheading > h3{
+    font-size: 1.3rem; 
+    font-weight: 400;
+}
+
+header > .uperheading > h3 > span{
+    font-weight: 600;
+}
+
+header > .navigetion{
+    padding: 1rem 5rem;
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* header > .navigetion >.left-header > .logo{
+    width: 3rem;
+    height: 3rem;
+} */
+
+header > .navigetion >.left-header > .logo >img{
+    width: 94px;
+    height: 62px;
+}
+
+header > .navigetion > .left-header{
+    display: flex;
+    align-items: center;
+    gap: 14rem;
+}
+
+
+
+header > .navigetion > .left-header > nav{
+    display: flex;
+    align-items: center;
+}
+
+header > .navigetion > .left-header > button{
+    display: none;
+}
+
+header > .navigetion > .left-header > nav > ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+header > .navigetion > .left-header > nav > ul > li >a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000ba;
+    /* opacity: .9; */
+}
+
+header > .navigetion > .left-header > nav > ul > li >a:hover{
+    color: #000000;
+}
+
+.blank{
+    transition: all .5s ease-in-out ;
+    height: 0;
+    overflow: hidden;
+    padding: 0rem 2.5rem;
+}
+
+#dropdown1:hover .blank{
+    display: block;
+    height: 23rem;
+}
+
+.dropdowncontent{
+    display: none;
+    position:absolute ;
+    width: 90%;
+    height: 0rem;
+    overflow: hidden;
+    margin: auto;
+    padding: 0rem 1rem;
+    top: 100%;
+    left: 5%;
+    background: white;
+}
+
+.dropsapnicon{
+    display: none;
+}
+
+.firstdromcart:hover .dropdowncontent{
+    height: 45rem;
+    padding: 1rem;
+}
+
+#dropdown p {
+    margin-top: 1rem;
+}
+
+
+#dropdown-content1 {
+    /* padding: 1rem 2.5rem; */
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 44%;
+    min-width: 160px;
+    z-index: 9;
+}
+
+#dropdown-content1 > li{
+    list-style: none;
+}
+
+#dropdown-content1 > li > a{
+    line-height: 3rem;
+    font-size: 1.6rem;
+    color: #000000d8;
+}
+
+#dropdown-content1 > li > a:hover{
+    color: #000000ba;
+}
+
+
+
+.left-header > nav > ul > li:nth-child(1) > ul > li > a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 400;
+    /* justify-content: space-between; */
+}
+
+.left-header > nav > ul > li:nth-child(1) > ul > li > a:hover{
+    opacity: 0.8;
+}
+
+nav > ul > li:nth-child(1) > ul > li > a > img{
+    width: 6rem;
+}
+
+nav > ul > li:nth-child(1) > ul{
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap ;
+    gap: 2.5rem;
+}
+
+.left-header > nav > ul > li > a > span{
+    display: block;
+    font-size: 2rem;
+    transform: rotate(90deg);
+}
+
+
+nav > ul > li:nth-child(1) > ul > li{
+    list-style: none;
+    width: 24rem;
+}
+
+header > .navigetion > .right-header{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+header > .navigetion > .right-header > .search_box{
+    height: 4rem;
+    width: 312px;
+    background: #f4f5f7;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0rem 1.5rem;
+    border-radius:50rem;
+}
+
+header > .navigetion > .right-header > .search_box > i{
+    font-size: 1.8rem;
+    opacity: 1;
+    color: #4a4b4baa;
+    cursor: pointer;
+}
+
+
+header > .navigetion > .right-header > .search_box > input{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+}
+
+header > .navigetion > .right-header > .search_box > input::placeholder{
+    color: #000000ba;
+}
+
+header > .navigetion > .right-header > .productcard-user{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+header > .navigetion > .right-header > .productcard-user > i{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.searchicon{
+    display: none;
+}
+
+
+
+.prosearchlist{
+    top: 9rem;
+    right: 14.7rem;
+    z-index: -1;
+    position: absolute;
+    width: 21%;
+    height: 25rem;
+    border-radius: .8rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.274);
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+
+
+
+.prosearchlist::-webkit-scrollbar{
+    width: 1rem;
+}
+.prosearchlist #listitem{
+    list-style: none;
+    width: 90%;
+    margin:  auto;
+    padding-top:2rem ;
+}
+
+#listitem li a{
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: #000000;
+}
+
+#listitem li a img{
+    width: 22%;
+}
+
+#payProlist{
+    width: 100%;
+    height: 75rem;
+    z-index: 100;
+    position: absolute;
+    background: #000000ba;
+    display: flex;
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
+}
+
+#payProlist .thePayprocard{
+    border-radius: .7rem;
+    overflow: hidden;
+    padding: 1rem 2rem;
+    background-color: #f1f1f1;
+    width: 50%;
+    height: 60%;
+}
+
+#payProlist .thePayprocard .payHeading{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.lesftsect .theproParlist{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#payProlist .thePayprocard .payHeading i{
+    font-size: 1.5rem;
+    background: #bcbebe;
+    color: #f1f1f1;
+    padding: .7rem 1rem;
+    border-radius: 50rem;
+}
+
+#payProlist .thePayprocard .hteProMuni{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.thePayprocard .hteProMuni .lesftsect{
+    width: 60%;
+    height: 35rem;
+}
+
+.thePayprocard .hteProMuni .rightsect{
+    width: 40%;
+}
+
+
+.thePayprocard .hteProMuni .rightsect input{
+    width: 90%;
+    margin: auto;
+    display: block;
+    padding: 1.4rem 1.8rem;
+    background: transparent;
+    border: 1px dotted black;
+    font-size: 1.3rem;
+    border-radius: 50rem;
+}
+
+.thePayprocard .hteProMuni .rightsect ul{
+    height: 100%;
+    list-style: none;
+    font-size: 1.3rem;
+    width: 100%;
+}
+
+.thePayprocard .hteProMuni .rightsect ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.thePayprocard .hteProMuni .rightsect ul li h2{
+    font-size: 1.4rem;
+}
+
+
+#payProlist .thePayprocard .imgbox{
+    width: 5rem;
+    height: 5rem;
+}
+
+#payProlist .thePayprocard .imgbox img{
+    width: 100%;
+    height: 100%;
+}
+
+#shoping-card{
+    position: absolute;
+    padding: 1rem 1.7rem;
+    background: #ffffff;
+    right: -100%;
+    top: 0;
+    width: 40rem;
+    height:80rem;
+    /* overflow-y: scroll; */
+}
+
+
+#shoping-card > .hcardheading{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#shoping-card > .hcardheading > h1{
+    color: #000000d8;
+}
+
+#shoping-card > .hcardheading > i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#shoping-card > .addcard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 22rem auto;
+}
+
+#shoping-card > .addcard > img{
+    width: 37%;
+    height: 13.8rem;
+}
+
+#shoping-card > .addcard > h1{
+    margin-top: 2rem;
+    color: #000000d8;
+}
+
+#shoping-card > .addcard > button{
+    margin-top: 2rem;
+    padding: 1.4rem 3.2rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+    background-color: #000000e9;
+    font-weight: 700;
+    border-radius: 1rem;
+}
+
+#shoping-card > .theProlistcard{
+    width: 100%;
+    height: 100%;
+
+}
+
+#shoping-card > .theProlistcard .theserveslist{
+    background: #fffbfb;
+    margin-top: 1rem;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+}
+
+#shoping-card > .theProlistcard .theserveslist .delibox{
+    text-align: center;
+    width: 25%;
+    height: 100%;
+}
+
+.theProlistcard .theserveslist .delibox img{
+    width: 70%;
+    height: 55%;
+}
+
+.theProlistcard .theserveslist .delibox h3{
+    font-size: 1.2rem;
+}
+
+#shoping-card > .theProlistcard .TheDailyProCardList{
+    width: 100%;
+    height: 53%;
+    padding: 0 1rem;
+    margin: 1rem auto;
+    overflow-y: scroll;
+}
+
+.TheDailyProCardList::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.TheDailyProCardList .box{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    margin: 2rem auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+.TheDailyProCardList .box .imgbox{
+    width: 30%;
+    height: 100%;
+}
+
+.TheDailyProCardList .box .imgbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .7rem;
+}
+
+.TheDailyProCardList .box .textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+}
+
+.TheDailyProCardList .box .textbox h1{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.TheDailyProCardList .box .textbox h3{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.TheDailyProCardList .box .textbox .btncont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.TheDailyProCardList .btncont .btnbox{
+    display: flex;
+    align-items: center;
+    border-radius: .9rem;
+    overflow: hidden;
+}
+
+.TheDailyProCardList .btncont .btnbox button,
+.TheDailyProCardList .btncont .btnbox input{
+    width: 3rem;
+    padding: .5rem 0;
+    border: .1px solid #f1f1f1;
+    text-align: center;
+}
+
+.TheDailyProCardList .btncont .btnbox input{
+    background: #fefefe;
+}
+
+.paysection{
+    width: 100%;
+}
+
+.paysection .getbox{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.paysection .getbox input{
+    cursor: pointer;
+}
+
+.paysection .getbox h3{
+    font-size: 1.3rem;
+}
+
+.paysection .getbox h3 span{
+    font-weight: 800;
+}
+
+.UPIsection{
+    background-color: antiquewhite;
+    display: flex;
+    padding: .7rem 0;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.UPIsection img{
+    width: 3rem;
+}
+
+.amountsection{
+    padding: 1.3rem 0;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+}
+
+.amountsection .left{
+    width: 40%;
+    height: 100%;
+}
+
+.amountsection .right{
+    width: 60%;
+    height: 100%;
+}
+
+.amountsection .left h1{
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.amountsection .right button{
+    border-radius: .7rem;
+    width: 100%;
+    height: 100%;
+    background: #1a2024;
+    color: #eaf3f3;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.bell{
+    position: absolute;
+    right: 4rem;
+    top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1;
+    background: red;
+    width: 2rem;
+    height: 2rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 50rem;
+}
+
+/* ###########################################################home###############################################33 */
+
+.slider-contener {
+    height: 76rem;
+    display: flex;
+    align-items: center;
+    padding-top: 12.5rem;
+}
+
+.slider-contener > article{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+section > article > .sliders{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+section > article > .sliders  > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    text-align: center;
+}
+
+section > article > .section_contener{
+    top: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 3rem;
+    position: absolute;
+}
+section > article > .section_contener > button{
+    padding: 1.1rem 1.5rem;
+    border-radius: 50rem;
+    font-size: 1.6rem;
+    background-color: #1a2024;
+    cursor: pointer;
+    color: #eaf3f3;
+}
+
+/* ########################################exploer####################################33 */
+
+.explroer{
+    width: 93.6%;
+    margin: auto;
+    margin-top: 1rem;
+    overflow: auto;
+}
+
+.explroer::-webkit-scrollbar {
+    width: 3rem;
+}
+
+.explroerheading {
+    font-size: 2.5rem;
+    padding: 1rem 5rem;
+    margin-top: 2rem;
+    color: #1a2024;
+    font-weight: 400;
+}
+
+.explroerheading > span{
+    font-weight: 800;
+}
+
+.explroer > .video_box{
+    width: 120%;
+    height: 40%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.explroer > .video_box  > article{
+    width: 35rem;
+}
+
+.explroer > .video_box  > article > h1{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.video_box  > article > video{
+    border-radius: 2.5rem;
+    width: 100%;
+}
+
+
+
+/* ######################################################################################33 */
+
+
+
+
+.bestOfboat{
+    width: 93.6%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.bestOfboat  > h1{
+    margin-bottom:1rem ;
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: #1a2024dd;
+}
+
+.bestOfboat  > h1 > span{
+    color: #1a2024;
+    font-weight: 800;
+}
+
+.bestOfboat .btncont > .bestMenu {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    font-weight: 300;
+    color: #8f9192;
+    font-size: 1.4rem;
+    
+}
+
+.bestOfboat .btncont > .bestMenu > button{
+    padding: .7rem 2.3rem;
+    border-radius: 50rem;
+    cursor: pointer;
+}
+
+.bestOfboat .btncont > .bestMenu > button:focus{
+    background: #d6dfe7;
+    color: #0a0a0a;
+}
+
+.bestMainproduct {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+
+
+.bestMain  article {
+    margin-top: 2rem;
+    width: 30%;
+    border: 1px solid #dcdada;
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.bestMain  article > img{
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.bestMain article > span{
+    top: 3%;
+    border-top-right-radius:.5rem ;
+    border-bottom-right-radius:.5rem ;
+    position: absolute;
+    background: #1a2024;
+    color: #ffffff;
+    padding: 4px 8px 5px 3px ;
+}
+
+.bestMain  article > .price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px ;
+}
+
+.bestaricle  .price > .left > p{
+    margin-bottom: .5rem;
+}
+
+.bestaricle  .gold{
+    font-size: 1.1rem;
+    font-weight: 800;
+    width: 65%;
+    border: 1px solid #ffffff;
+    position: absolute;
+    border-radius: 5rem;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    text-align: center;
+    background: #fcc50b;
+    padding: 6px 10px;
+}
+
+.price > .left > p{
+    font-size: 1.3rem;
+    color: #8f9192;
+}
+
+.price > .left > p > i{
+    color: gold;
+    font-size: 1.4rem;
+}
+
+.price > .left > h4{
+    margin-bottom: .5rem;
+    font-size: 1.6rem;
+}
+
+.price > .left > h3{
+    font-size: 1.5rem;
+}
+
+.price > .left > h3 > del{
+    font-size: 1.2rem;
+    color: #c3c4c6;
+}
+
+.price > .left > h3 > span{
+    font-size: 1.2rem;
+    color: rgb(15, 196, 15)
+}
+
+.price > .right{
+    text-align: center;
+}
+
+.price > .right > h1{
+    text-align: right;
+    
+    margin-bottom: .5rem;
+}
+
+.price > .right > button{
+    padding: 12px;
+    background: #1a2024;
+    color: #ffffff;
+    font-weight:700 ;
+    border-radius: 1rem;
+}
+
+.price > .right > h1 > span{
+    display: inline-flex;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.visitable{
+    transition: all .5s ease-in-out;
+    display: none;
+}
+
+
+.Dally {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+
+.Dally > article {
+    /* margin-top: 2rem; */
+    width: 30%;
+    border: 1px solid #dcdada;
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.Dally > article > img{
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.Dally > article > span{
+    top: 3%;
+    border-top-right-radius:.5rem ;
+    border-bottom-right-radius:.5rem ;
+    position: absolute;
+    background: #1a2024;
+    color: #ffffff;
+    padding: 4px 8px 5px 3px ;
+}
+
+.Dally > article > .price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px ;
+}
+
+.bestaricle > .price > .left > p{
+    margin-bottom: .5rem;
+}
+
+.bestaricle  .gold{
+    font-size: 1.1rem;
+    font-weight: 800;
+    width: 65%;
+    border: 1px solid #ffffff;
+    position: absolute;
+    border-radius: 5rem;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    text-align: center;
+    background: #fcc50b;
+    padding: 6px 10px;
+}
+
+.price > .left > p{
+    font-size: 1.3rem;
+    color: #8f9192;
+}
+
+.price > .left > p > i{
+    color: gold;
+    font-size: 1.4rem;
+}
+
+.price > .left > h4{
+    margin-bottom: .5rem;
+    font-size: 1.6rem;
+}
+
+.price > .left > h3{
+    font-size: 1.5rem;
+}
+
+.price > .left > h3 > del{
+    font-size: 1.2rem;
+    color: #c3c4c6;
+}
+
+.price > .left > h3 > span{
+    font-size: 1.2rem;
+    color: rgb(15, 196, 15)
+}
+
+.price > .right{
+    text-align: center;
+}
+
+.price > .right > h1{
+    text-align: right;
+    
+    margin-bottom: .5rem;
+}
+
+.price > .right > button{
+    padding: 12px;
+    background: #1a2024;
+    color: #ffffff;
+    font-weight:700 ;
+    border-radius: 1rem;
+}
+
+.price > .right > h1 > span{
+    display: inline-flex;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+
+.Categories{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    gap: 1rem;
+    width: 93.6%;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+.Categories .Box a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #000000;
+}
+
+.Delivary{
+    margin: auto;
+    margin-top: 4rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.Delivary .delibox{
+    flex: 1 1 20rem;
+}
+
+.Delivary h1{
+    color: #4a4b4b;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.Delivary h1 span{
+    color: #000000;
+    font-weight: 600;
+}
+
+.lifstylecon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    text-align: center;
+}
+
+.lifstylecon img{
+    margin-top: 0;
+    width: 100%;
+}
+
+.text{
+    background: #dfeff1;
+}
+
+.lifstylecon h1{
+    color: #1a2024;
+    font-size: 2rem;
+}
+
+.lifstylecon a{
+    font-size: 1.5rem;
+}
+
+/* #########################################tribe#########################################3 */
+
+.tribesection{
+    width: 93.6%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.smartcontsiner{
+    width: 100%;
+    overflow-x: scroll;
+    margin: 1rem 0;
+}
+
+.smartcontsiner::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.smartcontsiner .tribe{
+    width: 280rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.smartcontsiner .tribe article{
+    text-align: center;
+    border: .1rem solid #bcbebe;
+    width: 30%;
+    border-radius: .8rem;
+}
+
+.smartcontsiner .tribe article a{
+    position: relative;
+    color: #0a0a0a;
+}
+
+.tribe article .videobox{
+    width: 100%;
+    height: 70%;
+}
+
+.tribe > article  > a > .imgbox{
+    background-color: #f4f5f7;
+    position: relative;
+    padding: .7rem;
+    border-radius: .6rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+}
+
+.tribe > article  > a > .imgbox img{
+    width: 90%;
+}
+
+.tribe > article  > a > .textbox{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tribe > article  > a > .textbox h3{
+    font-size: 1.4rem;
+}
+
+.tribe > article  > a > .textbox p{
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tribe > article  > a > .textbox p span:first-child(1){
+    font-size: 1.4rem;
+}
+
+.tribe > article  > a > .textbox p .linthro{
+    color: #848484;
+    text-decoration: line-through;
+}
+
+.tribe > article  > a > .textbox p del{
+    font-size: 1.2rem;
+    color: green;
+}
+
+.tribe article .videobox video{
+    border-top-left-radius: .8rem;
+    border-top-right-radius: .8rem;
+    width: 100%;
+}
+
+/* ####################################press########################################33 */
+
+.prasee{
+    width: 93.6%;
+    margin: 3rem auto;
+    /* margin-top: 2rem; */
+    position: relative;
+}
+
+.prasee h1{
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+.prasee  h1 span{
+    font-weight:800 ;
+}
+
+.presslidercont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 30rem;
+}
+
+.presslidercont .box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.presslidercont .box .left,
+.presslidercont .box .right{
+    flex: 1 1 30rem;
+}
+
+.presslidercont .box .left{
+    width: 40%;
+    height: 100%;
+    background: #d6dfe7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.presslidercont .box .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 2rem;
+    padding: 1rem 13rem;
+    text-align: center;
+    height: 100%;
+    width: 60%;
+    background: #f4f5f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.presslidercont .box .right i {
+    font-size: 4rem;
+}
+
+.prasee .btnbox{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    position: absolute;
+    right: 37rem;
+    bottom: 3rem;
+}
+
+
+.prasee .btnbox button{
+    background: #f4f5f7;
+    font-size: 1.2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.274);
+}
+
+/* ####################################footer##################################3 */
+
+footer{
+    width: 93.6%;
+    /* height: 40rem; */
+    margin: 3rem auto;
+    padding: 1rem;
+    background: aliceblue;
+}
+
+footer .footercon{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+
+footer .footercon .box{
+    flex: 1 1 30rem;
+}
+
+footer .footercon .box img{
+    width: 40%;
+}
+
+footer .footercon .box h1{
+    font-size: 1.7rem;
+    margin-top: 1rem;
+}
+
+footer .footercon .box form{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    padding: .7rem 1rem;
+    border-radius: .5rem;
+    background-color: #fff;
+}
+
+.footercon .box form input{
+    width: 90%;
+    padding: .7rem;
+    font-size: 1.3rem;
+}
+
+.footercon .box form input::placeholder{
+    font-size: 1.3rem;
+    color: #848484;
+}
+
+.footercon .box form button{
+    border: .1px solid #848484;
+    background: transparent;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50rem;
+}
+
+footer .footercon .box:nth-child(3) h3{
+    margin-top: 1rem;
+}
+
+footer .footercon .box:nth-child(4) h3{
+    margin-top: 4rem;
+}
+
+footer .footercon .box ul{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+footer .footercon .box ul li{
+    margin: 1rem 0;
+}
+
+footer .footercon .box ul li a{
+    color: #4a4b4b;
+    font-weight: 400;
+}
+
+footer .footercon .dubleul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer > p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+footer > p span{
+    font-weight: 600;
+}
+
+
+#orderbox{
+    padding-top: 12rem;
+    height: 60rem;
+    width: 93.6%;
+    margin: auto;
+}
+
+#orderprolist{
+    font-size: 8rem;
+}
+
+/* #########################################Daliyprohome###########################33 */
+
+#thedayupro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+
+#thedayupro .daliyprocine{
+    width: 93.6%;
+    margin:  auto;
+}
+
+#thedayupro .daliyprocine .link{
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+#thedayupro .daliyprocine .link a{
+    color: #1a2024;
+}
+
+#thedayupro .daliyprocine .link a span{
+    font-weight:600 ;
+}
+
+#thedayupro .daliyprocine h1{
+    font-weight:700;
+}
+
+.daliyprofilter{
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+}
+.daliyprofilter::-webkit-scrollbar{
+    display: none;
+}
+
+.daliyprofilter button{
+    padding: .7rem 2.5rem;
+    border-radius: .8rem;
+    background: transparent;
+    border-radius: .5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+}
+
+.daliyprofilter button.theBtncol{
+    background-color: #838784;
+    color: #eaf3f3;
+}
+
+.dalitprocontener .box{
+    border-radius: .7rem;
+    padding: .6rem;
+    width: 100%;
+    height: 20rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    border: .1px solid #bcbebe;
+    background-color: #f8f8f8;
+}
+
+#TheCard{
+    cursor: pointer;
+}
+
+.dalitprocontener .box .left{
+    position: relative;
+    overflow: hidden;
+    width: 34%;
+    border-radius: .7rem;
+    height: 100%;
+}
+
+.dalitprocontener .box .left span{
+    display: block;
+    position: absolute;
+    font-weight: 800;
+    width: 100%;
+    height: 2rem;
+    bottom: 0;
+    background-color: #fcc50b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dalitprocontener .box .left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.dalitprocontener .box .right{
+    width: 60%;
+    height: 90%;
+}
+
+.thePrice .color{
+    text-align: right;
+}
+
+.thePrice .color span{
+    /* background: ; */
+    margin-left: -1rem;
+    border-radius: 50rem;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.dalitprocontener .box .right .reating{
+    height: 20%;
+    font-size: 1.2rem;
+}
+
+.dalitprocontener .box .right .reating i{
+    font-size: 1.5rem;
+    color: #fcc50b;
+}
+
+.dalitprocontener .box .right .textbox h1{
+    font-size: 1.5rem;
+}
+
+
+.dalitprocontener .box .right .textbox p{
+    font-size: 1.3rem
+}
+
+.dalitprocontener .box .right .textbox p del{
+    color: #11ba09;
+    font-size: 1rem;
+}
+
+.dalitprocontener .box .right .btnbox{
+    width: 100%;
+    height: 36%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.dalitprocontener .box .right .btnbox button{
+    width: 100%;
+    height: 70%;
+    font-size: 1.5rem;
+    border-radius: .8rem;
+    font-weight: 800;
+    color: #fffbfb;
+    background-color: #1a2024;
+}
+
+
+
+
+/* ###################################################responsive######################################### */
+
+
+
+@media (max-width:576px) {
+html{
+    font-size: 50%;
+}
+
+header > .uperheading{
+    padding: 1rem 6rem;
+    height: 5rem;
+    text-align: center;
+} 
+
+header > .navigetion{
+    padding: 1rem 1.2rem;
+}
+
+#Boatnavbar{
+    position: absolute;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    height: 90vh;
+    top: 13rem;
+    left: -100%;
+    background: #fff;
+}
+
+header > .navigetion > .left-header > nav > ul{
+    width: 100%;
+    padding: 1rem;
+    display: inline-block;
+    line-height: 5rem;
+}
+
+header > .navigetion > .left-header > nav > ul > li{
+    width: 100%;
+    font-weight:800 ;
+}
+
+header > .navigetion > .left-header > nav > ul > li >a{
+    font-weight: 800;
+}
+
+.fa-bag-shopping{
+    right: 4rem;
+}
+
+#dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header > .navigetion > .left-header >button{
+    width: 1rem;
+    margin-right:1rem ;
+    display: block;
+    background: transparent;
+}
+
+header > .navigetion > .left-header > button i{
+    font-size: 2.5rem;
+}
+
+header > .navigetion > .left-header{
+    align-items: center;
+    gap: 2rem;
+}
+
+header > .navigetion >.left-header > .logo >img{
+    width: 35%;
+    margin-top: -.5rem;
+}
+
+.usericon{
+    display: none;
+}
+
+.explroer > .video_box  > article{
+    width: 45rem;
+}
+
+.searchicon{
+    display: block;
+    font-size: 4rem;
+}
+
+header > .navigetion > .right-header > .showsearchbar{
+    width: 30rem;
+    /* display: none; */
+}
+
+header > .navigetion > .right-header > .productcard-user > i{
+    font-size: 2rem;
+}
+
+.slider-contener{
+    /* transform: scale(-.1); */
+    height: 36rem;
+}
+
+.prosearchlist{
+    width: 34rem;
+    right: 6rem;
+}
+
+
+.dropdowncontent{
+    /* display: none; */
+    position:static ;
+}
+
+.firstdromcart:hover .dropdowncontent{
+    height: 50rem;
+    overflow-y: scroll;
+    padding: 1rem;
+}
+
+.dropdowncontent::-webkit-scrollbar {
+    width: .1rem;
+}
+
+#dropdown1:hover .blank{
+    display: block;
+    height: 23rem;
+}
+
+#dropdown-content1 {
+    position: static;
+}
+
+nav > ul  li a{
+    font-weight: 400;
+}
+
+nav > ul > li:nth-child(1) > ul{
+    flex: 1 1 30rem;
+}
+
+
+.thescriol{
+    width: 95%;
+    margin: auto;
+    margin-top: 1rem;
+    overflow-x: scroll;
+}
+
+.thescriol::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.Dally {
+    width: 155rem;
+    height: 47rem;
+}
+
+.bestaricle  .gold{
+    top: 71%;
+}
+
+.Categories{
+    overflow: hidden;
+    overflow-x: scroll;
+    margin-top: 7rem;
+}
+
+.Categories::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.explroer > .video_box{
+    width: 120rem;
+}
+
+.explroer > .video_box  > article > h1{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.Delivary{
+    margin:3rem auto;  
+}
+
+
+.lifstylecon{
+    display: none;
+}
+
+.bestMain > article {
+    display: flex;
+}
+
+.bestOfboat .btncont{
+    overflow-x: scroll;
+    margin-top: 1rem;
+}
+
+.bestOfboat .btncont > .bestMenu{
+    width: 90rem;
+}
+
+.bestOfboat .btncont::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.explroerheading{
+    margin:  0rem;
+}
+
+.bestMain{
+    overflow-x: scroll;
+}
+
+.bestMain::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.bestMain > .bestMainproduct{
+    width: 150rem;
+}
+
+.bestofbaatheading{
+    margin: .8rem 0;
+}
+
+.prasee .btnbox{
+    width: 100%;
+    right: 0;
+    justify-content: space-around;
+}
+
+.prasee .btnbox{
+    font-size: 2rem;
+}
+
+.bell{
+    right: 0rem;
+    top: 7rem;
+}
+}
+
+@media (min-width:577px) and (max-width:768px) {
+html{
+    font-size: 50%;
+}
+
+header > .uperheading{
+    padding: 1rem 6rem;
+    height: 5rem;
+    text-align: center;
+} 
+
+header > .navigetion{
+    padding: 1rem 1.2rem;
+}
+
+#Boatnavbar{
+    position: absolute;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    height: 90vh;
+    top: 13rem;
+    left: -100%;
+    background: #fff;
+}
+
+header > .navigetion > .left-header > nav > ul{
+    width: 100%;
+    padding: 1rem;
+    display: inline-block;
+    line-height: 5rem;
+}
+
+header > .navigetion > .left-header > nav > ul > li{
+    width: 100%;
+    font-weight:800 ;
+}
+
+header > .navigetion > .left-header > nav > ul > li >a{
+    font-weight: 800;
+}
+
+.fa-bag-shopping{
+    right: 4rem;
+}
+
+#dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header > .navigetion > .left-header >button{
+    width: 1rem;
+    margin-right:1rem ;
+    display: block;
+    background: transparent;
+}
+
+header > .navigetion > .left-header > button i{
+    font-size: 2.5rem;
+}
+
+header > .navigetion > .left-header{
+    align-items: center;
+    gap: 2rem;
+}
+header > .navigetion >.left-header > .logo >img{
+    width: 35%;
+    margin-top: -.5rem;
+}
+
+.usericon{
+    display: none;
+}
+
+.explroer > .video_box  > article{
+    width: 45rem;
+}
+
+.searchicon{
+    display: block;
+    font-size: 4rem;
+}
+
+header > .navigetion > .right-header > .showsearchbar{
+    width: 30rem;
+    /* display: none; */
+}
+
+header > .navigetion > .right-header > .productcard-user > i{
+    font-size: 2rem;
+}
+
+.slider-contener{
+    /* transform: scale(-.1); */
+    height: 45rem;
+}
+
+.prosearchlist{
+    width: 34rem;
+    right: 6rem;
+}
+
+
+.dropdowncontent{
+    /* display: none; */
+    position:static ;
+}
+
+.firstdromcart:hover .dropdowncontent{
+    height: 50rem;
+    overflow-y: scroll;
+    padding: 1rem;
+}
+
+.dropdowncontent::-webkit-scrollbar {
+    width: .1rem;
+}
+
+#dropdown1:hover .blank{
+    display: block;
+    height: 23rem;
+}
+
+#dropdown-content1 {
+    position: static;
+}
+
+nav > ul  li a{
+    font-weight: 400;
+}
+
+nav > ul > li:nth-child(1) > ul{
+    flex: 1 1 30rem;
+}
+
+
+.thescriol{
+    width: 95%;
+    margin: auto;
+    margin-top: 1rem;
+    overflow-x: scroll;
+}
+
+.thescriol::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.Dally {
+    width: 155rem;
+    height: 47rem;
+}
+
+.bestaricle  .gold{
+    top: 71%;
+}
+
+.Categories{
+    overflow: hidden;
+    overflow-x: scroll;
+    margin-top: 7rem;
+}
+
+.Categories::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.explroer > .video_box{
+    width: 120rem;
+}
+
+.explroer > .video_box  > article > h1{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.Delivary{
+    margin:3rem auto;  
+}
+
+
+.lifstylecon{
+    display: none;
+}
+
+.bestMain > article {
+    display: flex;
+}
+
+.bestOfboat .btncont{
+    overflow-x: scroll;
+    margin-top: 1rem;
+}
+
+.bestOfboat .btncont > .bestMenu{
+    width: 90rem;
+}
+
+.bestOfboat .btncont::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.explroerheading{
+    margin:  0rem;
+}
+
+.bestMain{
+    overflow-x: scroll;
+}
+
+.bestMain::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.bestMain > .bestMainproduct{
+    width: 150rem;
+}
+
+.bestofbaatheading{
+    margin: .8rem 0;
+}
+
+.prasee .btnbox{
+    width: 100%;
+    right: 0;
+    justify-content: space-around;
+}
+
+.prasee .btnbox{
+    font-size: 2rem;
+}
+
+.bell{
+    right: 0rem;
+    top: 7rem;
+}
+
+.presslidercont .box .right{
+    display: none;
+} 
+}
+@media (min-width:769px) and (max-width:992px) {
+html{
+    font-size: 50%;
+}
+
+header > .uperheading{
+    padding: 1rem 6rem;
+    height: 5rem;
+    text-align: center;
+} 
+
+header > .navigetion{
+    padding: 1rem 1.2rem;
+}
+
+#Boatnavbar{
+    position: absolute;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    height: 90vh;
+    top: 13rem;
+    left: -100%;
+    background: #fff;
+}
+
+header > .navigetion > .left-header > nav > ul{
+    width: 100%;
+    padding: 1rem;
+    display: inline-block;
+    line-height: 5rem;
+}
+
+header > .navigetion > .left-header > nav > ul > li{
+    width: 100%;
+    font-weight:800 ;
+}
+
+header > .navigetion > .left-header > nav > ul > li >a{
+    font-weight: 800;
+}
+
+.fa-bag-shopping{
+    right: 4rem;
+}
+
+#dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header > .navigetion > .left-header >button{
+    width: 1rem;
+    margin-right:1rem ;
+    display: block;
+    background: transparent;
+}
+
+header > .navigetion > .left-header > button i{
+    font-size: 2.5rem;
+}
+
+header > .navigetion > .left-header{
+    align-items: center;
+    gap: 2rem;
+}
+header > .navigetion >.left-header > .logo >img{
+    width: 35%;
+    margin-top: -.5rem;
+}
+
+.usericon{
+    display: none;
+}
+
+.explroer > .video_box  > article{
+    width: 45rem;
+}
+
+.searchicon{
+    display: block;
+    font-size: 4rem;
+}
+
+header > .navigetion > .right-header > .showsearchbar{
+    width: 30rem;
+    /* display: none; */
+}
+
+header > .navigetion > .right-header > .productcard-user > i{
+    font-size: 2rem;
+}
+
+.slider-contener{
+    /* transform: scale(-.1); */
+    height: 55rem;
+}
+
+.prosearchlist{
+    width: 34rem;
+    right: 6rem;
+}
+
+
+.dropdowncontent{
+    /* display: none; */
+    position:static ;
+}
+
+.firstdromcart:hover .dropdowncontent{
+    height: 50rem;
+    overflow-y: scroll;
+    padding: 1rem;
+}
+
+.dropdowncontent::-webkit-scrollbar {
+    width: .1rem;
+}
+
+#dropdown1:hover .blank{
+    display: block;
+    height: 23rem;
+}
+
+#dropdown-content1 {
+    position: static;
+}
+
+nav > ul  li a{
+    font-weight: 400;
+}
+
+nav > ul > li:nth-child(1) > ul{
+    flex: 1 1 30rem;
+}
+
+
+.thescriol{
+    width: 95%;
+    margin: auto;
+    margin-top: 1rem;
+    overflow-x: scroll;
+}
+
+.thescriol::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.Dally {
+    width: 155rem;
+    height: 47rem;
+}
+
+.bestaricle  .gold{
+    top: 71%;
+}
+
+.Categories{
+    overflow: hidden;
+    overflow-x: scroll;
+    margin-top: 7rem;
+}
+
+.Categories::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.explroer > .video_box{
+    width: 120rem;
+}
+
+.explroer > .video_box  > article > h1{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.Delivary{
+    margin:3rem auto;  
+}
+
+
+.lifstylecon{
+    display: none;
+}
+
+.bestMain > article {
+    display: flex;
+}
+
+.bestOfboat .btncont{
+    overflow-x: scroll;
+    margin-top: 1rem;
+}
+
+.bestOfboat .btncont > .bestMenu{
+    width: 90rem;
+}
+
+.bestOfboat .btncont::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.explroerheading{
+    margin:  0rem;
+}
+
+.bestMain{
+    overflow-x: scroll;
+}
+
+.bestMain::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.bestMain > .bestMainproduct{
+    width: 150rem;
+}
+
+.bestofbaatheading{
+    margin: .8rem 0;
+}
+
+.prasee .btnbox{
+    width: 100%;
+    right: 0;
+    justify-content: space-around;
+}
+
+.prasee .btnbox{
+    font-size: 2rem;
+}
+
+.bell{
+    right: 0rem;
+    top: 7rem;
+}
+
+.presslidercont .box .right{
+    display: none;
+} 
+}   
+
+@media (min-width:993px) and (max-width:1050px) {
+html{
+    font-size: 50%;
+}
+
+header > .uperheading{
+    padding: 1rem 6rem;
+    height: 5rem;
+    text-align: center;
+} 
+
+header > .navigetion{
+    padding: 1rem 1.2rem;
+}
+
+#Boatnavbar{
+    position: absolute;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    height: 90vh;
+    top: 13rem;
+    left: -100%;
+    background: #fff;
+}
+
+header > .navigetion > .left-header > nav > ul{
+    width: 100%;
+    padding: 1rem;
+    display: inline-block;
+    line-height: 5rem;
+}
+
+header > .navigetion > .left-header > nav > ul > li{
+    width: 100%;
+    font-weight:800 ;
+}
+
+header > .navigetion > .left-header > nav > ul > li >a{
+    font-weight: 800;
+}
+
+.fa-bag-shopping{
+    right: 4rem;
+}
+
+#dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header > .navigetion > .left-header >button{
+    width: 1rem;
+    margin-right:1rem ;
+    display: block;
+    background: transparent;
+}
+
+header > .navigetion > .left-header > button i{
+    font-size: 2.5rem;
+}
+
+header > .navigetion > .left-header{
+    align-items: center;
+    gap: 2rem;
+}
+header > .navigetion >.left-header > .logo >img{
+    width: 35%;
+    margin-top: -.5rem;
+}
+
+.usericon{
+    display: none;
+}
+
+.explroer > .video_box  > article{
+    width: 45rem;
+}
+
+.searchicon{
+    display: block;
+    font-size: 4rem;
+}
+
+header > .navigetion > .right-header > .showsearchbar{
+    width: 30rem;
+    /* display: none; */
+}
+
+header > .navigetion > .right-header > .productcard-user > i{
+    font-size: 2rem;
+}
+
+.slider-contener{
+    /* transform: scale(-.1); */
+    height: 55rem;
+}
+
+.prosearchlist{
+    width: 34rem;
+    right: 6rem;
+}
+
+
+.dropdowncontent{
+    /* display: none; */
+    position:static ;
+}
+
+.firstdromcart:hover .dropdowncontent{
+    height: 50rem;
+    overflow-y: scroll;
+    padding: 1rem;
+}
+
+.dropdowncontent::-webkit-scrollbar {
+    width: .1rem;
+}
+
+#dropdown1:hover .blank{
+    display: block;
+    height: 23rem;
+}
+
+#dropdown-content1 {
+    position: static;
+}
+
+nav > ul  li a{
+    font-weight: 400;
+}
+
+nav > ul > li:nth-child(1) > ul{
+    flex: 1 1 30rem;
+}
+
+
+.thescriol{
+    width: 95%;
+    margin: auto;
+    margin-top: 1rem;
+    overflow-x: scroll;
+}
+
+.thescriol::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.Dally {
+    width: 155rem;
+    height: 47rem;
+}
+
+.bestaricle  .gold{
+    top: 71%;
+}
+
+.Categories{
+    overflow: hidden;
+    overflow-x: scroll;
+    margin-top: 7rem;
+}
+
+.Categories::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.explroer > .video_box{
+    width: 120rem;
+}
+
+.explroer > .video_box  > article > h1{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.Delivary{
+    margin:3rem auto;  
+}
+
+
+.lifstylecon{
+    display: none;
+}
+
+.bestMain > article {
+    display: flex;
+}
+
+.bestOfboat .btncont{
+    overflow-x: scroll;
+    margin-top: 1rem;
+}
+
+.bestOfboat .btncont > .bestMenu{
+    width: 90rem;
+}
+
+.bestOfboat .btncont::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.explroerheading{
+    margin:  0rem;
+}
+
+.bestMain{
+    overflow-x: scroll;
+}
+
+.bestMain::-webkit-scrollbar {
+    width: .1rem;
+}
+
+.bestMain > .bestMainproduct{
+    width: 150rem;
+}
+
+.bestofbaatheading{
+    margin: .8rem 0;
+}
+
+.prasee .btnbox{
+    width: 100%;
+    right: 0;
+    justify-content: space-around;
+}
+
+.prasee .btnbox{
+    font-size: 2rem;
+}
+
+.bell{
+    right: 0rem;
+    top: 7rem;
+}
+
+.presslidercont .box .right{
+    display: none;
+} 
+}

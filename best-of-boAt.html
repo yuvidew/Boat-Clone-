@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/f7fe29f0bc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+    * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        -webkit-transition: .2s linear;
+        transition: all .5s ease-in-out;
+    }
+
+    input::placeholder{
+        color: #4a4b4b;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    html::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    button{
+        cursor: pointer;
+        background: transparent;
+    }
+
+    body{
+        overflow-x: hidden;
+
+
+    }
+
+    .bestOfboat{
+        width: 93.6%;
+        margin: auto;
+        margin-top: 10rem;
+    }
+
+    .bestOfboat  > h1{
+        margin-bottom:1rem ;
+        font-size: 2.3rem;
+        font-weight: 300;
+        color: #1a2024dd;
+    }
+
+    .bestOfboat  > h1 > span{
+        color: #1a2024;
+        font-weight: 800;
+    }
+
+    .bestOfboat > .bestMenu {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+        font-weight: 300;
+        color: #8f9192;
+        font-size: 1.6rem;
+        
+    }
+
+    .bestOfboat > .bestMenu > button{
+        padding: .7rem 2.3rem;
+        border-radius: 50rem;
+        cursor: pointer;
+    }
+    
+    .bestOfboat > .bestMenu > button:hover{
+        background: #ecf0f4;
+        color: #0a0a0a;
+        font-weight: 800;
+    }
+
+    .bestMain {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+    }
+
+    .bestMain > article {
+        margin-top: 2rem;
+         width: 30%;
+         border: 1px solid #dcdada;
+         position: relative;
+         border-radius: 1.5rem;
+         overflow: hidden;
+    }
+
+    .bestMain > article > img{
+        width: 100%;
+        height: 30rem;
+        object-fit: cover;
+    }
+
+    .bestMain > article > span{
+        top: 3%;
+        border-top-right-radius:.5rem ;
+        border-bottom-right-radius:.5rem ;
+        position: absolute;
+        background: #1a2024;
+        color: #ffffff;
+        padding: 4px 8px 5px 3px ;
+    }
+
+    .bestMain > article > .price {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px ;
+    }
+
+    .bestaricle > .price > .left > p{
+        margin-bottom: .5rem;
+    }
+
+    .bestaricle  .gold{
+        font-size: 1.1rem;
+        font-weight: 800;
+        width: 65%;
+        border: 1px solid #ffffff;
+        position: absolute;
+        border-radius: 5rem;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #000000;
+        text-align: center;
+        background: #fcc50b;
+        padding: 6px 10px;
+    }
+    
+    .price > .left > p{
+        font-size: 1.3rem;
+        color: #8f9192;
+    }
+    
+    .price > .left > p > i{
+        color: gold;
+        font-size: 1.4rem;
+    }
+    
+    .price > .left > h4{
+        margin-bottom: .5rem;
+        font-size: 1.6rem;
+    }
+    
+    .price > .left > h3{
+        font-size: 1.5rem;
+    }
+
+    .price > .left > h3 > del{
+        font-size: 1.2rem;
+        color: #c3c4c6;
+    }
+    
+    .price > .left > h3 > span{
+        font-size: 1.2rem;
+        color: rgb(15, 196, 15)
+    }
+
+    .price > .right{
+        text-align: center;
+    }
+
+    .price > .right > h1{
+        text-align: right;
+        
+        margin-bottom: .5rem;
+    }
+
+    .price > .right > button{
+        padding: 12px;
+        background: #1a2024;
+        color: #ffffff;
+        font-weight:700 ;
+        border-radius: 1rem;
+    }
+
+    .price > .right > h1 > span{
+        display: inline-flex;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+    }
+
+    .visitable{
+        transition: all .5s ease-in-out;
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <section class="bestOfboat">
+        <h1>Best Of <span>boAT</span></h1>
+        <div class="bestMenu">
+                <button class="currentmenu">Best Seller</button>
+                <button class="earbuds">Top Earbuds</button>
+                <button class="watch">Top Watch</button>
+                <button class="Wireless">Tranding Wirless</button>
+                <button class="ANC">Tranding ANC</button>
+        </div>
+        <main class="bestMain">
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-bolt" style="color: orangered;"></i>&nbsp; Super Saver</span>
+                <img src="seller1.jpeg" alt="">
+                <div class="gold">17 Hours Playback</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.9</p>
+                        <h4>Airdopes 161</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,099 &nbsp;<del><i class="fa-solid fa-indian-rupee-sign"></i>2,490</del> &nbsp;<span>56% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #0a0a0a; margin-left: -8px;"></span>
+                            <span style="background: #e7e7e7; margin-left: -8px;"></span>
+                            <span style="background: #657286; margin-left: -8px;"></span>
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp; 100 OFF ON BIG100</span>
+                <img src="seller2.jpeg" alt="">
+                <div class="gold">45 Hours Playback</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.9</p>
+                        <h4>Airdopes 131 PRO</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,099 <del><i class="fa-solid fa-indian-rupee-sign"></i>2,490</del> <span>% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #393939; margin-left: -8px;"></span>
+                            <span style="background: #b77a8d; margin-left: -8px;"></span>
+                            <span style="background: #0a35ad; margin-left: -8px;"></span>
+                            
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-bolt" style="color: orangered;"></i> Super Saver</span>
+                <img src="seller3.jpeg" alt="">
+                <div class="gold">BT Calling</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.8</p>
+                        <h4>Wave Flex Connect</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,499 <del><i class="fa-solid fa-indian-rupee-sign"></i>7,990</del> <span>81% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #121212; margin-left: -8px;"></span>
+                            <span style="background: #d6c186; margin-left: -8px;"></span>
+                            <span style="background: #0a3fa8; margin-left: -8px;"></span>
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp; 200 OFF ON BIG200</span>
+                <img src="seller4.jpeg" alt="">
+                <div class="gold">42 Hours Playback</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.8</p>
+                        <h4>Airdopes 141</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,300 <del><i class="fa-solid fa-indian-rupee-sign"></i>4,490</del> <span>71% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #9c9c9c; margin-left: -8px;"></span>
+                            <span style="background: #080808; margin-left: -8px;"></span>
+                            <span style="background: #f2ffff; margin-left: -8px;"></span>
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <main class="bestMain visitable">
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-bolt" style="color: orangered;"></i>&nbsp; Super Saver</span>
+                <img src="earbuts.jpeg" alt="">
+                <div class="gold">50 Hours Playback</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 5.0</p>
+                        <h4>Airdopes 161</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,200 &nbsp;<del><i class="fa-solid fa-indian-rupee-sign"></i>3,490</del> &nbsp;<span>66% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #0a0a0a; margin-left: -8px;"></span>
+                            <span style="background: #e7e7e7; margin-left: -8px;"></span>
+                            <span style="background: #657286; margin-left: -8px;"></span>
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-bolt" style="color: orangered;"></i>&nbsp; Super Saver</span>
+                <img src="earbuts2.jpeg" alt="">
+                <div class="gold">Clear Calling</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.9</p>
+                        <h4>Airdopes 115</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,399 <del><i class="fa-solid fa-indian-rupee-sign"></i>2,990</del> <span>53% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #393939; margin-left: -8px;"></span>
+                            <span style="background: #b77a8d; margin-left: -8px;"></span>
+                            <span style="background: #0a35ad; margin-left: -8px;"></span>
+                            
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-bolt" style="color: orangered;"></i> Super Saver</span>
+                <img src="earbuts3.jpeg" alt="">
+                <div class="gold">24 Hours Playback</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.5</p>
+                        <h4>Airdopes 113</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,299 <del><i class="fa-solid fa-indian-rupee-sign"></i>2,990</del> <span>57% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #121212; margin-left: -8px;"></span>
+                            <span style="background: #d6c186; margin-left: -8px;"></span>
+                            <span style="background: #0a3fa8; margin-left: -8px;"></span>
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp; 200 OFF ON BIG200</span>
+                <img src="earbuts4.jpeg" alt="">
+                <div class="gold">42 Hours Playback</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.9</p>
+                        <h4>Airdopes 191G</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,799 <del><i class="fa-solid fa-indian-rupee-sign"></i>3,490</del> <span>48% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #9c9c9c; margin-left: -8px;"></span>
+                            <span style="background: #080808; margin-left: -8px;"></span>
+                            <span style="background: #f2ffff; margin-left: -8px;"></span>
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <main class="bestMain visitable">
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-bolt" style="color: orangered;"></i>&nbsp; Super Saver</span>
+                <img src="watch1.jpeg" alt="">
+                <div class="gold">BT Calling</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.9</p>
+                        <h4>Wave Call</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,799 &nbsp;<del><i class="fa-solid fa-indian-rupee-sign"></i>7,990</del> &nbsp;<span>77% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #0a0a0a; margin-left: -8px;"></span>
+                            <span style="background: #e7e7e7; margin-left: -8px;"></span>
+                            <span style="background: #657286; margin-left: -8px;"></span>
+                            
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp; 100 OFF ON BIG100</span>
+                <img src="watch2.jpeg" alt="">
+                <div class="gold">BT Calling</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.7</p>
+                        <h4>Storm call</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,799 <del><i class="fa-solid fa-indian-rupee-sign"></i>7,990</del> <span>77% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #393939; margin-left: -8px;"></span>
+                            <span style="background: #b77a8d; margin-left: -8px;"></span>
+                            <span style="background: #0a35ad; margin-left: -8px;"></span>
+                            
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-bolt" style="color: orangered;"></i> Super Saver</span>
+                <img src="watch1.jpeg" alt="">
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 5.0</p>
+                        <h4>Trebel Wave Call</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,799 <del><i class="fa-solid fa-indian-rupee-sign"></i>7,990</del> <span>77% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #d6c186; margin-left: -8px;"></span>
+                            <span style="background: #0a3fa8; margin-left: -8px;"></span>
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp; 200 OFF ON BIG200</span>
+                <img src="watch4.jpeg" alt="">
+                <div class="gold">Health Monitoring</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.9</p>
+                        <h4>Wave Lite</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,799 <del><i class="fa-solid fa-indian-rupee-sign"></i>6,990</del> <span>74% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #9c9c9c; margin-left: -8px;"></span>
+                            <span style="background: #080808; margin-left: -8px;"></span>
+                            <span style="background: #f2ffff; margin-left: -8px;"></span>
+                            
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <main class="bestMain visitable">
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-bolt" style="color: orangered;"></i>&nbsp; Super Saver</span>
+                <img src="wirless1.jpeg" alt="">
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.9</p>
+                        <h4>Rockerz 103 Pro</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,199 &nbsp;<del><i class="fa-solid fa-indian-rupee-sign"></i>2,490</del> &nbsp;<span>52% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #0a0a0a; margin-left: -8px;"></span>
+                            <span style="background: #e7e7e7; margin-left: -8px;"></span>
+                            <span style="background: #657286; margin-left: -8px;"></span>
+                            
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bestaricle">
+                <img src="wirless2.jpeg" alt="">
+                <div class="gold">8 HOURS PLAYBACK</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.8</p>
+                        <h4>Trebel Rockerz 235 V2</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,199 <del><i class="fa-solid fa-indian-rupee-sign"></i>2,990</del> <span>60% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #393939; margin-left: -8px;"></span>
+                            <span style="background: #b77a8d; margin-left: -8px;"></span>
+                            <span style="background: #0a35ad; margin-left: -8px;"></span>
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-bolt" style="color: orangered;"></i> Super Saver</span>
+                <img src="wirless2.jpeg" alt="">
+                <div class="gold">BT Calling</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.9</p>
+                        <h4>Trebel Rockerz 235 V2</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>899 <del><i class="fa-solid fa-indian-rupee-sign"></i>2,990</del> <span>70% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #121212; margin-left: -8px;"></span>
+                            <span style="background: #d6c186; margin-left: -8px;"></span>
+                            <span style="background: #0a3fa8; margin-left: -8px;"></span>
+                            
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bestaricle">
+                <span><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp; 200 OFF ON BIG200</span>
+                <img src="wirless3.png" alt="" width="80%">
+                <div class="gold">25 Hours Playback</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.9</p>
+                        <h4>Rockerz 378</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>1,299 <del><i class="fa-solid fa-indian-rupee-sign"></i>2,990</del> <span>57% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #9c9c9c; margin-left: -8px;"></span>
+                            <span style="background: #080808; margin-left: -8px;"></span>
+                            <span style="background: #f2ffff; margin-left: -8px;"></span>
+                            
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <main class="bestMain visitable">
+            <article class="bestaricle">
+                <img src="ANC4.jpeg" alt="">
+                <div class="gold">Noise Cancellation</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 4.8</p>
+                        <h4>Airdopes 411 ANC</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>2,499 &nbsp;<del><i class="fa-solid fa-indian-rupee-sign"></i>4,990</del> &nbsp;<span>50% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #0a0a0a; margin-left: -8px;"></span>
+                            <span style="background: #e7e7e7; margin-left: -8px;"></span>
+                            <span style="background: #657286; margin-left: -8px;"></span>
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bestaricle">
+                <img src="ANC2.jpeg" alt="">
+                <div class="gold">Noise Cancellation</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 5.0</p>
+                        <h4>Airdopes 501 ANC</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>4,990 <del><i class="fa-solid fa-indian-rupee-sign"></i>9,990</del> <span>50% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #393939; margin-left: -8px;"></span>
+                            <span style="background: #b77a8d; margin-left: -8px;"></span>
+                            <span style="background: #0a35ad; margin-left: -8px;"></span>
+                            
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="bestaricle">
+                <img src="ANC3.jpeg" alt="">
+                <div class="gold">Noise Cancellation</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> 5.0</p>
+                        <h4>Airdopes 500 ANC</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>4,990 <del><i class="fa-solid fa-indian-rupee-sign"></i>9,990</del> <span>50% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #121212; margin-left: -8px;"></span>
+                            <span style="background: #d6c186; margin-left: -8px;"></span>
+                            <span style="background: #0a3fa8; margin-left: -8px;"></span>
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bestaricle">
+                <img src="seller4.jpeg" alt="">
+                <div class="gold">Noise Cancellation</div>
+                <div class="price">
+                    <div class="left">
+                        <p><i class="fa-solid fa-star"></i> Be first to review</p>
+                        <h4>Airdopes 411 ANC</h4>
+                        <h3><i class="fa-solid fa-indian-rupee-sign"></i>2,990 <del><i class="fa-solid fa-indian-rupee-sign"></i>4,990</del> <span>40% off</span></h3>
+                    </div>
+                    <div class="right">
+                        <h1>
+                            <span style="background: #9c9c9c; margin-left: -8px;"></span>
+                            <span style="background: #080808; margin-left: -8px;"></span>
+                            <span style="background: #f2ffff; margin-left: -8px;"></span>
+                        </h1>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </section>
+    <script>
+        const BESTmenu = document.querySelectorAll(".bestMenu button");
+        const BESTmain = document.querySelectorAll(".bestMain");
+        let count = 0
+        BESTmenu.forEach(BESTmenu => {
+            
+            BESTmenu.addEventListener("click", () =>{
+                BESTmain.forEach((main, index) => {
+                    if((BESTmenu.className === "currentmenu") && index === 0){
+                        main.classList.remove("visitable")
+                    }else if((BESTmenu.className === "earbuds") && index === 1){
+                        main.classList.remove("visitable")
+                    }else if((BESTmenu.className === "watch") && index === 2){
+                        main.classList.remove("visitable")
+                    }else if((BESTmenu.className === "Wireless") && index === 3){
+                        main.classList.remove("visitable")
+                    }else if((BESTmenu.className === "ANC") && index === 4){
+                        main.classList.remove("visitable")
+                    }   
+                    else{
+                        main.classList.add("visitable")
+                    }
+                })
+            })
+        })
+
+        
+    </script>
+</body>
+</html>
+
